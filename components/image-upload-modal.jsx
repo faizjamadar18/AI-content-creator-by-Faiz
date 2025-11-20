@@ -450,7 +450,7 @@ const ImageUploadModal = ({ onOpen, onClose, onImageSelect }) => {
                                             <Button
                                                 onClick={handleClose}
                                                 variant="outline"
-                                                className="border-slate-600 hover:bg-slate-700"
+                                                className="border-slate-600 hover:bg-black"
                                             >
                                                 Cancel
                                             </Button>

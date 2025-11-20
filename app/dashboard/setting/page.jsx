@@ -44,7 +44,7 @@ const SettingPage = () => {
             </div>
 
             {/* Username Settings */}
-            <Card className="card-glass max-w-2xl">
+            <Card className="bg-[#101112] max-w-2xl">
                 <CardHeader>
                     <CardTitle className="text-white flex items-center">
                         <User className="h-5 w-5 mr-2" />

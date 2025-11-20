@@ -22,7 +22,7 @@ export default function PostEditorHeader({
     const isDraft = initialData?.status === "draft";
     const isEdit = mode === "edit";
     return (
-        <header className="sticky top-0 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <header className="sticky top-0 bg-black/80 backdrop-blur-md border-b border-slate-800">
             <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
                 {/* Left */}
                 <div className="flex items-center space-x-4">

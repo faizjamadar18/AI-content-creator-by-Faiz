@@ -60,7 +60,7 @@ export default function ProfilePage({ params }) {
 
   if (userLoading || postsLoading) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto mb-4"></div>
           <p className="text-slate-400">Loading profile...</p>
@@ -71,7 +71,7 @@ export default function ProfilePage({ params }) {
 
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
       <PublicHeader link="/dashboard" title="Back to Home" />
       <div className="max-w-7xl mx-auto px-6 py-12">

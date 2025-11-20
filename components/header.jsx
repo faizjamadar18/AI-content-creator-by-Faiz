@@ -23,52 +23,61 @@ const Header = () => {
         }
     }, [isLoading, isAuthenticated, router, path])  // jo jo dikh raha hai upr voh sb
 
+    const gradientText =
+        "bg-gradient-to-r from-[#FAD961] via-[#F76B1C] to-[#845EF3] bg-clip-text text-transparent";
+
     if (path !== "/" && path !== "/feed") { // this means show header only on "/" and "/feed"
         return null;
     }
 
     return (
-        <header className='fixed top-6 left-1/2  transform -translate-x-1/2 z-50 w-full max-w-3xl px-4'>
-            {/* transform -translate-x-1/2: it’s very commonly used for centering elements. */}
-            {/* transform: This enables CSS transforms (like translate, scale, rotate, etc.) on the element.*/}
-            {/* translate-x-1/2: This moves the element horizontally to the left by 50% of its own width. */}
-            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-full px-4 sm:px-6 md:px-8 py-3 flex items-center justify-between gap-2">
-                <Link href={isAuthenticated ? "/feed" : "/"} className='flex-shrink-0' >
-                    <Image
-                        src={"/logo.png"}
-                        alt='Creatr Logo'
-                        width={96}
-                        height={32}
-                        className="h-8 sm:h-10 w-auto object-contain"
-                    />
+        <header className='fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4 bg-black/50'>
+            <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                {/* Logo on left */}
+                <Link href={isAuthenticated ? "/feed" : "/"} className='flex items-center gap-3 flex-shrink-0'>
+                    <span className={`block sm:text-2xl text-xl font-black ${gradientText}`}>
+                        Faizbook.in
+                    </span>
                 </Link>
 
+                {/* Navigation links in center */}
                 {path === "/" && (
-                    <div className="hidden lg:flex space-x-6 flex-1 justify-center">
+                    <nav className="hidden md:flex items-center gap-6 flex-1 justify-center mr-10">
                         <Link
-                            href="#features"
-                            className="text-white font-medium transition-all duration-300 hover:text-purple-300 cursor-pointer"
+                            href="#vision"
+                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
                         >
-                            Features
+                            Vision
                         </Link>
                         <Link
-                            href="#testimonials"
-                            className="text-white font-medium transition-all duration-300 hover:text-purple-300 cursor-pointer"
+                            href="#suite"
+                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
                         >
-                            Testimonials
+                            Creator suite
                         </Link>
-                    </div>
-                )
-                }
+                        <Link
+                            href="#workflow"
+                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
+                        >
+                            Flow
+                        </Link>
+                        <Link
+                            href="#proof"
+                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
+                        >
+                            Proof
+                        </Link>
+                    </nav>
+                )}
 
-                <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-                    {/* flex-shrink-0: does not shrink at all */}
+                {/* Buttons on right */}
+                <div className="flex items-center justify-center gap-3 flex-shrink-0">
                     {/* when logged in:  */}
                     <Authenticated>
                         {/* Show Dashboard link on feed page */}
                         {path === "/feed" && (
                             <Link href="/dashboard">
-                                <Button variant="outline" className="hidden sm:flex" size="sm">
+                                <Button variant="outline" className="flex rounded-full border border-white/20 bg-white/10 hover:bg-white/20" size="sm">
                                     <LayoutDashboard className="h-4 w-4" />
                                     <span className="hidden md:inline ml-2">Dashboard</span>
                                 </Button>
@@ -79,25 +88,24 @@ const Header = () => {
 
                     {/* when logged out:  */}
                     <Unauthenticated>
-                        <SignInButton>
-                            <Button variant={"glass"} className="" size="sm">
+                        {/* <SignInButton>
+                            <Button variant={"none"} className=" text-white text-sm font-medium transition-all duration-300 hover:text-purple-300" size="sm">
                                 Sign In
                             </Button>
-                        </SignInButton>
-                        <SignUpButton>
-                            <Button variant="primary" size="sm" className="whitespace-nowrap">
-                                Get Started
+                        </SignInButton> */}
+                        <SignInButton>
+                            <Button className="border border-white/20 bg-black hover:bg-white/20 text-white whitespace-nowrap" size="sm">
+                                Get started
                             </Button>
-                        </SignUpButton>
+                        </SignInButton>
                     </Unauthenticated>
                 </div>
 
-
-                {isLoading && (
-                    <div className="fixed bottom-0 left-0 w-full z-40 flex justify-center">
+                {/* {isLoading && (
+                    <div className="fixed top-15 left-0 w-full z-40 flex justify-center">
                         <BarLoader width={"95%"} color="#D8B4FE" />
                     </div>
-                )}
+                )}  */}
             </div>
         </header>
     )

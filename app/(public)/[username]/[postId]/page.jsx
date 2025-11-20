@@ -65,7 +65,7 @@ const PostPage = ({ params }) => {
 
   if (postLoading) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto mb-4"></div>
           <p className="text-slate-400">Loading post...</p>
@@ -111,7 +111,7 @@ const PostPage = ({ params }) => {
     }
   };
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className="min-h-screen bg-black text-white">
       <PublicHeader link={`/${username}`} title="Back to Profile" />
 
       <div className="max-w-4xl mx-auto px-6 py-8">
@@ -202,7 +202,7 @@ const PostPage = ({ params }) => {
         <div className="mt-12 space-y-6">
           <h2 className="text-2xl font-bold text-white">Comments</h2>
 
-            <Card className="card-glass">
+            <Card className="bg-[#101112]">
               <CardContent className="p-6">
                 <form onSubmit={handleCommentSubmit} className="space-y-4">
                   <Textarea
@@ -282,7 +282,7 @@ const PostPage = ({ params }) => {
               ))}
             </div>
           ) : (
-            <Card className="card-glass">
+            <Card className="bg-[#101112]">
               <CardContent className="text-center py-8">
                 <MessageCircle className="h-12 w-12 text-slate-600 mx-auto mb-4" />
                 <p className="text-slate-400">No comments yet</p>

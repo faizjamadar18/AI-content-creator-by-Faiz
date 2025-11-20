@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-import { shadesOfPurple } from '@clerk/themes'
+import { dark, shadesOfPurple } from '@clerk/themes'
+dark
 import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,12 +27,12 @@ export default function RootLayout({ children }) {
         >
           <ClerkProvider
             appearance={{
-              baseTheme: shadesOfPurple,
+              baseTheme: dark,
             }}>
             <ConvexClientProvider>
               {/* Header */}
               <Header  />
-              <main className="bg-slate-900 min-h-screen text-white overflow-x-hidden">
+              <main className="bg-black min-h-screen text-white overflow-x-hidden">
                 {children}
               </main>
             </ConvexClientProvider>

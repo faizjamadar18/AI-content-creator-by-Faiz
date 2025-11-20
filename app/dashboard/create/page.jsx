@@ -25,7 +25,7 @@ const CreatePost = () => {
 
   if (!currentUser?.username) {
     return (
-      <div className="h-80 bg-slate-900 flex items-center justify-center p-8">
+      <div className="h-80 bg-black flex items-center justify-center p-8">
         <div className="max-w-2xl w-full text-center space-y-6">
           <h1 className="text-3xl font-bold text-white">Username Required</h1>
           <p className="text-slate-400 text-lg">

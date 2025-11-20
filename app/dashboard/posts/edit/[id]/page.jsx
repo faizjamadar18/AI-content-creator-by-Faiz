@@ -14,7 +14,7 @@ const EditPage = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="flex items-center space-x-3">
           <Loader2 className="h-6 w-6 animate-spin text-purple-400" />
           <span className="text-slate-300">Loading post...</span>
@@ -24,7 +24,7 @@ const EditPage = () => {
   }
   if (error || !post) {
     return (
-      <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      <div className="min-h-screen bg-black flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-white mb-2">Post Not Found</h1>
           <p className="text-slate-400">

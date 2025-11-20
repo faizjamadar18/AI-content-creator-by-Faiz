@@ -1,321 +1,312 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { features, socialProofStats, testimonials, platformTabs } from "@/lib/data";
+import { useState } from "react";
 import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+  features,
+  platformTabs,
+  socialProofStats,
+  testimonials,
+} from "@/lib/data";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  Star,
+  Zap,
+} from "lucide-react";
+
+const gradientText =
+  "bg-gradient-to-r from-[#FAD961] via-[#F76B1C] to-[#845EF3] bg-clip-text text-transparent";
 
 export default function Home() {
-  const [mousePosition, setmousePosition] = useState({ x: 0, y: 0 })
-  const [activeTab, setActiveTab] = useState(0)
-
-  useEffect(() => {
-    const handleMouseMovement = (e) => {
-      setmousePosition({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener("mousemove", handleMouseMovement)
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMovement)
-      // When your component disappears from the screen (unmounts), React runs the function you return from useEffect.
-      // This cleanup removes the "mousemove" listener so that your function doesn’t keep running even after the component is gone.
-    }
-  }, [])
-
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="bg-black text-white overflow-hidden relative min-h-screen">
-      {/* Dynamic cursor effect */}
-      <div className="fixed inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-green-900/20 animate-pulse"></div>
-      {/*fixed inset-0 → This div sticks to the whole screen, no matter where you scroll.  */}
-      {/* animate-pulse → Makes the colors pulse slowly, like glowing. */}
-      <div
-        className="fixed w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl pointer-events-none z-0"
-        // pointer-event-none: This means the element does not respond to any mouse or touch interactions
-        style={{
-          left: mousePosition.x - 192,
-          top: mousePosition.y - 192,
-          transition: "all 0.3s ease-out",
-        }}
-      // | Thing        | Meaning                        |
-      // | ------------ | ------------------------------ |
-      // | Circle size  | 384px (w-96 / h-96)            |
-      // | Half size    | 192px                          |
-      // | Subtract 192 | Center the circle on the mouse |
-
-
-      ></div>
-      {/* Hero Section */}
-      <section className="relative z-10 mt-48 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 statss-center">
-          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
-            <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-7xl lg:text-8xl font-black leading-none tracking-tight">
-                {/* leading-none means no extra space between lines */}
-                {/* tracking-tight makes the letters closer together */}
-                <span className="block font-black text-white">Create.</span>
-                <span className="block font-light italic text-purple-300">
-                  Publish.
-                </span>
-                <span className="block font-black bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
-                  Grow.
+    <div className="relative min-h-screen overflow-hidden bg-[#000000] text-white">
+      <div className="relative z-10 px-4 sm:px-8 lg:px-16">
+        {/* HERO */}
+        <header className="relative flex min-h-[85vh] flex-col items-center justify-center py-20 text-center mt-12">
+          <div className="absolute inset-x-0 top-0 mx-auto h-[500px] max-w-6xl rounded-full bg-gradient-to-b from-transparent via-[#1B1130]/40 to-transparent blur-3xl" />
+          <div className="relative z-10 mx-auto max-w-6xl space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-gray-200">
+              <Sparkles className="h-4 w-4 text-pink-200" />
+              AI-Powered Social media Platform
+            </div>
+            <div className="space-y-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
+                Creatr is the new
+                <span className={`block text-5xl sm:text-6xl lg:text-7xl font-black ${gradientText}`}>
+                  standard for collaboration
                 </span>
               </h1>
-
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl md:max-w-none">
-                {/* leading-relaxed = “slightly more spaced lines” */}
-                The AI-powered platform that turns your ideas into{" "}
-                <span className="text-purple-300 font-semibold">
-                  engaging content
-                </span>{" "}
-                and helps you build a thriving creator business.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                The delightfully smart collaboration platform for modern creators.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 statss-center lg:statss-start  justify-center lg:justify-start">
-              <Link href={"/dashboard"}>
-                <Button variant={"primary"} size={"xl"} className="rounded-full w-full sm:w-auto text-white">Start Creating for Free</Button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
+              <Link href="/dashboard" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto rounded-full bg-black hover:bg-[#191919] px-8 py-6 text-base font-semibold text-white border-2">
+                  Join waitlist
+                </Button>
               </Link>
-              <Link href={"/feed"}>
-                <Button variant={"outline"} size={"xl"} className="rounded-full w-full sm:w-auto">Explore the Feed</Button>
+
+              <Link href="/dashboard" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto rounded-full  bg-gradient-to-br from-[#FFC371]/30 to-[#8A6CFF]/30 px-8 py-6 text-base font-semibold text-white hover:bg-[#191919]">
+                  Join waitlist
+                </Button>
               </Link>
+
             </div>
           </div>
-          <div>
-            <Image
-              src="/banner.png"
-              alt="Platform Banner"
-              width={500}
-              height={700}
-              className="w-full h-auto object-contain"
-              // object-containL: content fits inside its container without being cropped.
-              priority
-            />
-          </div>
-        </div>
-      </section>
+        </header>
 
-
-      {/* Features */}
-      <section className="relative mt-14 z-10 py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/20">
-        <div className="max-w-7xl mx-auto ">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 ">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 lg:py-4">
-              <h2 className="gradient-text-primary p-1">Everything you need</h2>
+        {/* BRAND STORY */}
+        <section
+          id="vision"
+          className="relative overflow-hidden rounded-[44px] border border-white/10 bg-gradient-to-br from-[#050518] via-[#09031C] to-[#1A0F2B] px-8 py-12 sm:px-14 sm:py-16 shadow-[0_35px_120px_rgba(2,1,9,0.6)]"
+        >
+          <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-[#FFC371]/30 to-[#8A6CFF]/30 blur-3xl" />
+          <div className="relative grid gap-12 lg:grid-cols-2">
+            <div className="space-y-5">
+              <div className="flex items-center gap-3">
+                <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#FFC371] to-[#845EF3]" />
+                <div className="text-xs uppercase tracking-[0.5em] text-gray-400">
+                  Brand system
+                </div>
+              </div>
+              <h2 className={`text-4xl font-semibold ${gradientText}`}>
+                Creatr&apos;s brand design system
+              </h2>
+              <p className="text-gray-300">
+                We built Creatr to handle everything from ideation to distribution on a single
+                platform. By integrating AI, scheduling, community, and monetization, we deliver
+                delightful experiences that make building a creator business feel effortless.
+              </p>
+              <div className="flex gap-10 text-sm text-gray-400">
+                <div>
+                  <p className="text-white">Version 2.0</p>
+                  <p>Released: Nov 2025</p>
+                </div>
+                <div>
+                  <p className="text-white">Status: Live</p>
+                  <p>Theme: Aurora night</p>
+                </div>
+              </div>
             </div>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">From AI-powered writing assistance to advanced analytics, we've built the complete toolkit for modern creators.</p>
+            <p className="text-gray-400 leading-relaxed">
+              Every component mirrors our mission: clarity, craft, and audacious storytelling.
+              The gradients, arcs, and typography echo the momentum of shipping bold ideas to a
+              global audience. Use Creatr to orchestrate content, track growth, and collaborate
+              across teams without ever leaving this calm, focused space.
+            </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-6 ">
-            {features.map((feature, index) => (
+        </section>
+
+        {/* FEATURE GRID */}
+        <section id="suite" className="py-16">
+          <div className="flex flex-col gap-4 text-center">
+            <Badge className="mx-auto rounded-full border border-white/20 bg-white/10 text-xs uppercase tracking-[0.4em] text-gray-200">
+              Creator toolkit
+            </Badge>
+            <h3 className="text-3xl sm:text-4xl font-bold">
+              Everything you need to ship consistently
+            </h3>
+            <p className="text-gray-400 max-w-3xl mx-auto">
+              The same capabilities as before—rewrapped in a modern interface that feels
+              original, confident, and resume-ready.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => (
               <Card
-                key={index}
-                className="group transition-all duration-300 hover:scale-105 card-glass"
+                key={feature.title}
+                className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_60px_rgba(2,2,12,0.4)] transition hover:-translate-y-1 hover:border-white/30"
               >
-                <CardContent className="p-6 sm:p-8">
-                  <div
-                    className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform`}
-                  >
-                    <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-lg sm:text-xl mb-3 sm:mb-4 text-white">
-                    {feature.title}
-                  </CardTitle>
-                  <CardDescription className="text-sm sm:text-base text-gray-400">
-                    {feature.desc}
-                  </CardDescription>
-                </CardContent>
+                <div
+                  className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.color} text-white`}
+                >
+                  <feature.icon className="h-6 w-6" />
+                </div>
+                <p className="text-xl font-semibold">{feature.title}</p>
+                <p className="mt-2 text-base text-gray-300">{feature.desc}</p>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Platform Showcase */}
-      <section className="relative z-10 py-16 sm:py-24 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 ">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-1 lg:py-4">
-              <h2 className="gradient-text-primary p-1">How it works</h2>
-            </div>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">Three powerful modules working together to supercharge your content creation.</p>
-          </div>
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="lg:w-1/3">
-              <div className="space-y-4">
+        {/* WORKFLOW */}
+        <section id="workflow" className="py-16">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="space-y-6">
+              <p className="text-xs uppercase tracking-[0.6em] text-pink-200/70">
+                Orbital flow
+              </p>
+              <h3 className="text-4xl font-semibold">
+                Slide between creation, growth, and operations without friction.
+              </h3>
+              <p className="text-gray-400">
+                Tap a stage to preview what Creatr automates. All logic stays the same—you just
+                experience it through a fresh neon control deck.
+              </p>
+              <div className="flex flex-wrap gap-3">
                 {platformTabs.map((tab, index) => (
-                  <Button
-                    key={index}
-                    variant={activeTab === index ? "outline" : "ghost"}
+                  <button
+                    key={tab.title}
                     onClick={() => setActiveTab(index)}
-                    className="w-full justify-start h-auto p-6 "
+                    className={`rounded-full border px-6 py-2 text-sm transition ${activeTab === index
+                      ? "border-white/50 bg-white/10 text-white"
+                      : "border-white/10 text-gray-400 hover:border-white/30"
+                      }`}
                   >
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center ${activeTab === index
-                          ? "bg-gradient-to-br from-purple-500 to-blue-500"
-                          : "bg-muted"
-                          }`}
-                      >
-                        <tab.icon className="w-6 h-6" />
-                      </div>
-                      <div className="text-left">
-                        <h3 className="font-bold text-lg">{tab.title}</h3>
-                      </div>
-                    </div>
-                  </Button>
+                    {tab.title}
+                  </button>
                 ))}
               </div>
             </div>
-            <div className="lg:w-2/3">
-              <Card className="bg-gray-900/50 border-gray-800">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-white">
-                    {platformTabs[activeTab].title}
-                  </CardTitle>
-                  <CardDescription className="text-lg text-gray-400">
-                    {platformTabs[activeTab].description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {platformTabs[activeTab].features.map((feature, index) => (
-                      <div key={index} className="flex statss-center gap-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </div>
-                    ))}
+            <div className="rounded-[36px] border border-white/15 bg-gradient-to-br from-[#03040d] via-[#0f0b27] to-[#1c0f2f] p-10 shadow-[0_30px_90px_rgba(1,0,5,0.7)]">
+              <p className="text-sm uppercase tracking-[0.4em] text-gray-500">
+                {platformTabs[activeTab].title}
+              </p>
+              <h4 className={`mt-3 text-3xl font-semibold ${gradientText}`}>
+                {platformTabs[activeTab].description}
+              </h4>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {platformTabs[activeTab].features.map((feature) => (
+                  <div
+                    key={feature}
+                    className="flex items-start gap-3 rounded-2xl border border-white/15 bg-white/5 p-4"
+                  >
+                    <CheckCircle2 className="h-5 w-5 text-emerald-300" />
+                    <p className="text-gray-100">{feature}</p>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SocialProofStats:  */}
-      <section className="relative mt-14 z-10 py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/20">
-        <div className="max-w-7xl mx-auto ">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 ">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 lg:py-4">
-              <h2 className="gradient-text-primary p-1">Loved by creators worldwide</h2>
-            </div>
-          </div>
-          <div className=" grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 sm:gap-6">
-            {socialProofStats.map((stats, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <stats.icon />
-                </div>
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black mb-2 gradient-text-accent">{stats.metric}</div>
-                <div className="text-gray-400 text-base sm:text-lg">{stats.label}</div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/*testomonials */}
-      <section className="relative z-10 py-16 sm:py-24 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 ">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-1 lg:py-4">
-              <h2 className="gradient-text-primary p-1">What creators say</h2>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="card-glass">
-                <CardContent>
-                  <div className="flex items-center gap-1 mb-4">
+        </section>
+
+        {/* SOCIAL PROOF & TESTIMONIALS */}
+        <section id="proof" className="py-16">
+          <div className="rounded-[40px] border border-white/10 bg-[#06071B]/90 p-10 shadow-[0_30px_100px_rgba(0,0,0,0.6)]">
+            <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
+              <div>
+                <p className="text-xs uppercase tracking-[0.5em] text-gray-500">
+                  Proof it works
+                </p>
+                <h3 className="mt-3 text-4xl font-semibold">
+                  Creators worldwide trust Creatr
+                </h3>
+              </div>
+              <div className="flex-1" />
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {socialProofStats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+                  >
+                    <stat.icon className="h-5 w-5 text-pink-200" />
+                    <p className="mt-3 text-3xl font-bold">{stat.metric}</p>
+                    <p className="text-xs uppercase tracking-[0.4em] text-gray-400">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-12 grid gap-8 md:grid-cols-3">
+              {testimonials.map((testimonial) => (
+                <Card
+                  key={testimonial.name}
+                  className="rounded-3xl border-white/10 bg-white/5 p-6 flex flex-col gap-6"
+                >
+                  <div className="flex items-center gap-1">
                     {[...Array(testimonial.rating)].map((_, index) => (
-                      <Star key={index} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={index} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <div className="mb-6 leading-relaxed text-gray-300">
-                    &quot; Creatr transformed how I create content. The AI writing assistant saves me hours every week.&quot;
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="relative w-12 h-12">
-                      <Image
-                        src={`https://images.unsplash.com/photo-${testimonial.imageId}?w=100&h=100&fit=crop&crop=face`}
-                        alt={testimonial.name}
-                        fill
-                        className="rounded-full border-2 border-gray-700 object-cover"
-                        sizes="48px"
-                      />
-                    </div>
+                  <p className="text-gray-200">“{testimonial.content}”</p>
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src={`https://images.unsplash.com/photo-${testimonial.imageId}?w=96&h=96&fit=crop&crop=face`}
+                      alt={testimonial.name}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 rounded-full border border-white/20 object-cover"
+                    />
                     <div>
-                      <div className="font-semibold text-white">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-gray-400 text-sm">
-                        {testimonial.role}
-                      </div>
-                      <Badge variant="secondary" className="mt-1">
+                      <p className="font-semibold text-white">{testimonial.name}</p>
+                      <p className="text-sm text-gray-400">{testimonial.role}</p>
+                      <Badge className="mt-1 border-white/30 bg-white/10 text-white">
                         {testimonial.company}
                       </Badge>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-      </section>
-
-      {/* LastSEcton  */}
-      <section className="relative mt-14 z-10 py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/20">
-        <div className="max-w-7xl mx-auto ">
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20 ">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 lg:py-4">
-              <h2 className="gradient-text-primary p-1">Ready to create?</h2>
+                </Card>
+              ))}
             </div>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">Join thousands of creators who are already building their audience and growing their business with our AI-powered platform.</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/dashboard">
-              <Button
-                size="xl"
-                variant="primary"
-                className="rounded-full text-white w-full"
-              >
-                Start Your Journey
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </Link>
-            <Link href="/feed">
-              <Button
-                variant="outline"
-                size="xl"
-                className="rounded-full w-full"
-              >
-                Explore the Feed
-              </Button>
-            </Link>
+        </section>
 
+        {/* CTA */}
+        <section className="py-16">
+          <div className="rounded-[40px] border border-white/15 bg-gradient-to-r from-[#1E0A4C] via-[#4B0F54] to-[#F76B1C] p-10 text-center shadow-[0_30px_120px_rgba(11,4,25,0.9)]">
+            <p className="text-xs uppercase tracking-[0.5em] text-white/70">
+              Ready to create
+            </p>
+            <h3 className="mt-4 text-4xl font-semibold">
+              Join thousands of creators shipping their best work from Creatr.
+            </h3>
+            <p className="mt-3 text-lg text-white/80 max-w-2xl mx-auto">
+              Launch the dashboard to start publishing or tour the public feed to see Creatr in
+              action—no code, no friction.
+            </p>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
+              <Link href="/dashboard">
+                <Button className="rounded-full bg-white px-10 py-6 text-lg font-semibold text-black hover:bg-white/90">
+                  Start your journey
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/feed">
+                <Button
+                  variant="outline"
+                  className="rounded-full border-white/40 px-10 py-6 text-lg text-white hover:bg-white/10"
+                >
+                  Explore the feed
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <footer className="relative z-10 border-t py-8 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-muted-foreground">
-            Made with ❤️ by{" "}
-            <span className="text-foreground font-semibold">Faiz</span>
-          </p>
-        </div>
-      </footer>
+        {/* FOOTER */}
+        <footer className="border-t border-white/10 py-10 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-[#FFC371] to-[#845EF3]" />
+              <div>
+                <p className="font-semibold text-white">Creatr</p>
+                <p className="text-xs uppercase tracking-[0.3em]">Dark suite</p>
+              </div>
+            </div>
+            <div className="flex-1" />
+            <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em]">
+              <Link href="#vision" className="hover:text-white">Brand</Link>
+              <Link href="#suite" className="hover:text-white">Toolkit</Link>
+              <Link href="#workflow" className="hover:text-white">Flow</Link>
+              <Link href="#proof" className="hover:text-white">Proof</Link>
+            </div>
+            <p className="text-xs text-gray-500 w-full text-right">
+              Made with ❤️ by <span className="text-white">Faiz</span>
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

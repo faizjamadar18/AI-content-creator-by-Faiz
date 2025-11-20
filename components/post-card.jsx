@@ -57,7 +57,7 @@ const PostCard = ({
     return (
 
         <Card
-            className={`card-glass hover:border-purple-500/50 transition-colors`}
+            className={` bg-[#101112] hover:border-purple-500/50 transition-colors`}
         >
             <CardContent>
                 <div className="space-y-4">

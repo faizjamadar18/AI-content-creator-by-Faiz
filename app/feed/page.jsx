@@ -42,7 +42,7 @@ export default function FeedPage() {
     const currentPosts = getCurrentPosts();
 
     return (
-        <div className="min-h-screen bg-slate-900 text-white pt-32 pb-5">
+        <div className="min-h-screen bg-black text-white pt-32 pb-5">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Feed Header */}
                 <div className="text-center mb-10">
