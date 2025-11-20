@@ -1,7 +1,7 @@
 
 const Authlayout = ({children}) => {
   return (
-    <div className=' flex justify-center pt-48'>
+    <div className=' flex justify-center'>
       {children}
     </div>
   )

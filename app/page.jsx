@@ -30,7 +30,7 @@ export default function Home() {
     <div className="relative min-h-screen overflow-hidden bg-[#000000] text-white">
       <div className="relative z-10 px-4 sm:px-8 lg:px-16">
         {/* HERO */}
-        <header className="relative flex min-h-[85vh] flex-col items-center justify-center py-20 text-center mt-12">
+        <header id="home" className="relative flex min-h-[85vh] flex-col items-center justify-center py-20 text-center mt-12">
           <div className="absolute inset-x-0 top-0 mx-auto h-[500px] max-w-6xl rounded-full bg-gradient-to-b from-transparent via-[#1B1130]/40 to-transparent blur-3xl" />
           <div className="relative z-10 mx-auto max-w-6xl space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-gray-200">
@@ -39,25 +39,25 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight">
-                Creatr is the new
+                A Social Platform
                 <span className={`block text-5xl sm:text-6xl lg:text-7xl font-black ${gradientText}`}>
-                  standard for collaboration
+                  for Effortless Content Creation
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                The delightfully smart collaboration platform for modern creators.
+                Generate stunning posts, AI-optimized descriptions, and enhance your photos with background removal and professional shadow generation All with the help of AI 
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
               <Link href="/dashboard" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto rounded-full bg-black hover:bg-[#191919] px-8 py-6 text-base font-semibold text-white border-2">
-                  Join waitlist
+                  Start Creating for free
                 </Button>
               </Link>
 
               <Link href="/dashboard" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto rounded-full  bg-gradient-to-br from-[#FFC371]/30 to-[#8A6CFF]/30 px-8 py-6 text-base font-semibold text-white hover:bg-[#191919]">
-                  Join waitlist
+                  Explore The feed
                 </Button>
               </Link>
 
@@ -76,17 +76,12 @@ export default function Home() {
               <div className="flex items-center gap-3">
                 <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#FFC371] to-[#845EF3]" />
                 <div className="text-xs uppercase tracking-[0.5em] text-gray-400">
-                  Brand system
+                  Faiz Jamadar
                 </div>
               </div>
               <h2 className={`text-4xl font-semibold ${gradientText}`}>
-                Creatr&apos;s brand design system
+                Your Content, Supercharged by AI
               </h2>
-              <p className="text-gray-300">
-                We built Creatr to handle everything from ideation to distribution on a single
-                platform. By integrating AI, scheduling, community, and monetization, we deliver
-                delightful experiences that make building a creator business feel effortless.
-              </p>
               <div className="flex gap-10 text-sm text-gray-400">
                 <div>
                   <p className="text-white">Version 2.0</p>
@@ -94,15 +89,12 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-white">Status: Live</p>
-                  <p>Theme: Aurora night</p>
+                  <p>Theme: Dark</p>
                 </div>
               </div>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Every component mirrors our mission: clarity, craft, and audacious storytelling.
-              The gradients, arcs, and typography echo the momentum of shipping bold ideas to a
-              global audience. Use Creatr to orchestrate content, track growth, and collaborate
-              across teams without ever leaving this calm, focused space.
+              Stop juggling multiple tools to create one post. Your new AI-based social media platform integrates powerful, one-click AI tools directly into the posting workflow. From crafting the perfect caption and generating image-ready photos, everything you need to connect with your audience is in one seamless spac
             </p>
           </div>
         </section>
@@ -111,7 +103,7 @@ export default function Home() {
         <section id="suite" className="py-16">
           <div className="flex flex-col gap-4 text-center">
             <Badge className="mx-auto rounded-full border border-white/20 bg-white/10 text-xs uppercase tracking-[0.4em] text-gray-200">
-              Creator toolkit
+              Faizbook.ai toolkit
             </Badge>
             <h3 className="text-3xl sm:text-4xl font-bold">
               Everything you need to ship consistently
@@ -150,7 +142,7 @@ export default function Home() {
                 Slide between creation, growth, and operations without friction.
               </h3>
               <p className="text-gray-400">
-                Tap a stage to preview what Creatr automates. All logic stays the same—you just
+                Tap a stage to preview what Faizbook.ai automates. All logic stays the same—you just
                 experience it through a fresh neon control deck.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -198,8 +190,8 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-[0.5em] text-gray-500">
                   Proof it works
                 </p>
-                <h3 className="mt-3 text-4xl font-semibold">
-                  Creators worldwide trust Creatr
+                <h3 className="mt-3 text-4xl font-black">
+                  Creators worldwide trust Faizbook.ai
                 </h3>
               </div>
               <div className="flex-1" />
@@ -253,17 +245,16 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="py-16">
+        <section id="create" className="py-16">
           <div className="rounded-[40px] border border-white/15 bg-gradient-to-r from-[#1E0A4C] via-[#4B0F54] to-[#F76B1C] p-10 text-center shadow-[0_30px_120px_rgba(11,4,25,0.9)]">
             <p className="text-xs uppercase tracking-[0.5em] text-white/70">
               Ready to create
             </p>
             <h3 className="mt-4 text-4xl font-semibold">
-              Join thousands of creators shipping their best work from Creatr.
+              Ready to Transform Your Social Presence?
             </h3>
             <p className="mt-3 text-lg text-white/80 max-w-2xl mx-auto">
-              Launch the dashboard to start publishing or tour the public feed to see Creatr in
-              action—no code, no friction.
+              Start generating perfect content, professionally enhancing your images, and connecting with your audience on the platform built for the future of social media.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link href="/dashboard">
@@ -290,8 +281,8 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-[#FFC371] to-[#845EF3]" />
               <div>
-                <p className="font-semibold text-white">Creatr</p>
-                <p className="text-xs uppercase tracking-[0.3em]">Dark suite</p>
+                <p className="font-semibold text-white">Faizbook.ai</p>
+                <p className="text-xs uppercase tracking-[0.3em]">Faiz Jamadar</p>
               </div>
             </div>
             <div className="flex-1" />
@@ -302,7 +293,7 @@ export default function Home() {
               <Link href="#proof" className="hover:text-white">Proof</Link>
             </div>
             <p className="text-xs text-gray-500 w-full text-right">
-              Made with ❤️ by <span className="text-white">Faiz</span>
+              Copyright © 2025 by Faiz | All Rights Reserved.
             </p>
           </div>
         </footer>

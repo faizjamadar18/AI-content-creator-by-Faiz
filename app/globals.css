@@ -129,3 +129,9 @@
 }
 /* gray-900 → specific shade from Tailwind’s gray palette
 /50 → opacity percentage (50%) */
+
+
+html {
+  scroll-padding-top: 80px; 
+  scroll-behavior: smooth;
+}

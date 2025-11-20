@@ -36,7 +36,7 @@ const Header = () => {
                 {/* Logo on left */}
                 <Link href={isAuthenticated ? "/feed" : "/"} className='flex items-center gap-3 flex-shrink-0'>
                     <span className={`block sm:text-2xl text-xl font-black ${gradientText}`}>
-                        Faizbook.in
+                        Faizbook.ai
                     </span>
                 </Link>
 
@@ -44,28 +44,38 @@ const Header = () => {
                 {path === "/" && (
                     <nav className="hidden md:flex items-center gap-6 flex-1 justify-center mr-10">
                         <Link
+                            href="#home"
+                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
+                        >Home</Link>
+                        <Link
                             href="#vision"
-                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
+                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
                         >
                             Vision
                         </Link>
                         <Link
                             href="#suite"
-                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
+                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
                         >
-                            Creator suite
+                            Toolkit
                         </Link>
                         <Link
                             href="#workflow"
-                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
+                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
                         >
                             Flow
                         </Link>
                         <Link
                             href="#proof"
-                            className="text-white text-sm font-black  transition-all duration-300 hover:text-purple-300"
+                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
                         >
-                            Proof
+                            Proofs
+                        </Link>
+                        <Link
+                            href="#create"
+                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
+                        >
+                            Create
                         </Link>
                     </nav>
                 )}
@@ -101,7 +111,7 @@ const Header = () => {
                     </Unauthenticated>
                 </div>
 
-                {/* {isLoading && (
+                {/* {true && (
                     <div className="fixed top-15 left-0 w-full z-40 flex justify-center">
                         <BarLoader width={"95%"} color="#D8B4FE" />
                     </div>

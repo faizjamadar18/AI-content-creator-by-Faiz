@@ -78,10 +78,10 @@ export default function ProfilePage({ params }) {
         {/* Profile Header */}
         <div className="text-center mb-12">
           <div className="relative w-24 h-24 mx-auto mb-6">
-            {user.imageUrl && (
+            {user?.imageUrl && (
               <Image
-                src={user.imageUrl}
-                alt={user.name}
+                src={user?.imageUrl}
+                alt={user?.name}
                 fill
                 className="rounded-full object-cover border-2 border-slate-700"
                 sizes="96px"

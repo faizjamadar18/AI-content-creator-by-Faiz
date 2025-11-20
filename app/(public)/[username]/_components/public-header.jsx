@@ -23,7 +23,7 @@ const PublicHeader = ({ link, title }) => {
         </Link>
         <Link href={"/"} className='flex items-center gap-3 flex-shrink-0 mt-4'>
           <span className={`block sm:text-2xl text-lg font-black pb-4 sm:pb-1 ${gradientText}`}>
-            Faizbook.in
+            Faizbook.ai
           </span>
         </Link>
       </div>
