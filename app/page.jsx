@@ -142,8 +142,7 @@ export default function Home() {
                 Slide between creation, growth, and operations without friction.
               </h3>
               <p className="text-gray-400">
-                Tap a stage to preview what Faizbook.ai automates. All logic stays the same—you just
-                experience it through a fresh neon control deck.
+                Tap a stage to preview how Faizbook.ai automates.
               </p>
               <div className="flex flex-wrap gap-3">
                 {platformTabs.map((tab, index) => (
