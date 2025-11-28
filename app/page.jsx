@@ -68,21 +68,21 @@ export default function Home() {
         {/* BRAND STORY */}
         <section
           id="vision"
-          className="relative overflow-hidden rounded-[44px] border border-white/10 bg-gradient-to-br from-[#050518] via-[#09031C] to-[#1A0F2B] px-8 py-12 sm:px-14 sm:py-16 shadow-[0_35px_120px_rgba(2,1,9,0.6)]"
+          className="relative overflow-hidden rounded-[44px] border border-white/10 bg-gradient-to-br from-[#050518] via-[#09031C] to-[#1A0F2B] px-8 py-12 lg:px-28 lg:py-16 shadow-[0_35px_120px_rgba(2,1,9,0.6)]"
         >
           <div className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-gradient-to-br from-[#FFC371]/30 to-[#8A6CFF]/30 blur-3xl" />
-          <div className="relative grid gap-12 lg:grid-cols-2">
-            <div className="space-y-5">
-              <div className="flex items-center gap-3">
+          <div className="flex flex-col justify-center items-center gap-8">
+            <div className="">
+              {/* <div className="flex items-center gap-3">
                 <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[#FFC371] to-[#845EF3]" />
                 <div className="text-xs uppercase tracking-[0.5em] text-gray-400">
                   Faiz Jamadar
                 </div>
-              </div>
-              <h2 className={`text-4xl font-semibold ${gradientText}`}>
-                Your Content, Supercharged by AI
+              </div> */}
+              <h2 className={`text-4xl font-semibold ${gradientText} text-center`}>
+                Your Content Supercharged by AI
               </h2>
-              <div className="flex gap-10 text-sm text-gray-400">
+              {/* <div className="flex gap-10 text-sm text-gray-400">
                 <div>
                   <p className="text-white">Version 2.0</p>
                   <p>Released: Nov 2025</p>
@@ -91,20 +91,20 @@ export default function Home() {
                   <p className="text-white">Status: Live</p>
                   <p>Theme: Dark</p>
                 </div>
-              </div>
+              </div> */}
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed text-center">
               Stop juggling multiple tools to create one post. Your new AI-based social media platform integrates powerful, one-click AI tools directly into the posting workflow. From crafting the perfect caption and generating image-ready photos, everything you need to connect with your audience is in one seamless spac
             </p>
           </div>
         </section>
 
         {/* FEATURE GRID */}
-        <section id="suite" className="py-16">
+        <section id="suite" className="my-36">
           <div className="flex flex-col gap-4 text-center">
-            <Badge className="mx-auto rounded-full border border-white/20 bg-white/10 text-xs uppercase tracking-[0.4em] text-gray-200">
+            {/* <Badge className="mx-auto rounded-full border border-white/20 bg-white/10 text-xs uppercase tracking-[0.4em] text-gray-200">
               Faizbook.ai toolkit
-            </Badge>
+            </Badge> */}
             <h3 className="text-3xl sm:text-4xl font-bold">
               Everything you need to ship consistently
             </h3>
@@ -136,7 +136,7 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="space-y-6">
               <p className="text-xs uppercase tracking-[0.6em] text-pink-200/70">
-                Orbital flow
+                How it works
               </p>
               <h3 className="text-4xl font-semibold">
                 Slide between creation, growth, and operations without friction.
@@ -278,21 +278,21 @@ export default function Home() {
         {/* FOOTER */}
         <footer className="border-t border-white/10 py-10 text-sm text-gray-400">
           <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-2xl bg-gradient-to-br from-[#FFC371] to-[#845EF3]" />
               <div>
                 <p className="font-semibold text-white">Faizbook.ai</p>
                 <p className="text-xs uppercase tracking-[0.3em]">Faiz Jamadar</p>
               </div>
             </div>
-            <div className="flex-1" />
-            <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em]">
+            <div className="flex-1" /> */}
+            {/* <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em]">
               <Link href="#vision" className="hover:text-white">Brand</Link>
               <Link href="#suite" className="hover:text-white">Toolkit</Link>
               <Link href="#workflow" className="hover:text-white">Flow</Link>
               <Link href="#proof" className="hover:text-white">Proof</Link>
-            </div>
-            <p className="text-xs text-gray-500 w-full text-right">
+            </div> */}
+            <p className="text-xs text-gray-500 w-full text-center">
               Copyright © 2025 by Faiz | All Rights Reserved.
             </p>
           </div>
