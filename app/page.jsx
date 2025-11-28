@@ -94,7 +94,7 @@ export default function Home() {
               </div> */}
             </div>
             <p className="text-gray-400 leading-relaxed text-center">
-              Stop juggling multiple tools to create one post. Your new AI-based social media platform integrates powerful, one-click AI tools directly into the posting workflow. From crafting the perfect caption and generating image-ready photos, everything you need to connect with your audience is in one seamless spac
+              Stop juggling multiple tools to create one post. Your new AI-based social media platform integrates powerful, one-click AI tools directly into the posting workflow. From crafting the perfect caption and generating image-ready photos, everything you need to connect with your audience is in one space
             </p>
           </div>
         </section>
