@@ -45,7 +45,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Generate stunning posts, AI-optimized descriptions, and enhance your photos with background removal and professional shadow generation All with the help of AI 
+                Generate stunning posts, AI-optimized descriptions, and enhance your photos with background removal and professional shadow generation All with the help of AI
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto">
@@ -105,12 +105,11 @@ export default function Home() {
             {/* <Badge className="mx-auto rounded-full border border-white/20 bg-white/10 text-xs uppercase tracking-[0.4em] text-gray-200">
               Faizbook.ai toolkit
             </Badge> */}
-            <h3 className="text-3xl sm:text-4xl font-bold">
-              Everything you need to ship consistently
+            <h3 className="text-3xl sm:text-4xl font-black">
+               Toolkit preview
             </h3>
-            <p className="text-gray-400 max-w-3xl mx-auto">
-              The same capabilities as before—rewrapped in a modern interface that feels
-              original, confident, and resume-ready.
+            <p className="mb-3.5 text-xs uppercase tracking-[0.5em] text-gray-500 text-center">
+              What all features we provide 
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -133,18 +132,20 @@ export default function Home() {
 
         {/* WORKFLOW */}
         <section id="workflow" className="py-16">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="space-y-6">
-              <p className="text-xs uppercase tracking-[0.6em] text-pink-200/70">
-                How it works
-              </p>
-              <h3 className="text-4xl font-semibold">
-                Slide between creation, growth, and operations without friction.
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center justify-center">
+            <div>
+              <h3 className="mt-3 text-4xl font-black items-center text-center">
+                How It works
               </h3>
-              <p className="text-gray-400">
+              <p className=" my-3 text-xs uppercase tracking-[0.5em] text-gray-500 text-center">
                 Tap a stage to preview how Faizbook.ai automates.
               </p>
-              <div className="flex flex-wrap gap-3">
+            </div>
+          </div>
+          <div className="mt-12">
+
+            <div className="">
+              <div className="flex flex-wrap gap-3 justify-center mb-5 ">
                 {platformTabs.map((tab, index) => (
                   <button
                     key={tab.title}
@@ -159,7 +160,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded-[36px] border border-white/15 bg-gradient-to-br from-[#03040d] via-[#0f0b27] to-[#1c0f2f] p-10 shadow-[0_30px_90px_rgba(1,0,5,0.7)]">
+            <div className="rounded-[36px] border border-white/15 bg-gradient-to-br from-[#03040d] via-[#0f0b27] to-[#1c0f2f] p-10 shadow-[0_30px_90px_rgba(1,0,5,0.7)] xl:w-5xl text-center mx-auto">
               <p className="text-sm uppercase tracking-[0.4em] text-gray-500">
                 {platformTabs[activeTab].title}
               </p>
@@ -184,29 +185,14 @@ export default function Home() {
         {/* SOCIAL PROOF & TESTIMONIALS */}
         <section id="proof" className="py-16">
           <div className="rounded-[40px] border border-white/10 bg-[#06071B]/90 p-10 shadow-[0_30px_100px_rgba(0,0,0,0.6)]">
-            <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
+            <div className="flex flex-col gap-8 lg:flex-row lg:items-center justify-center">
               <div>
-                <p className="text-xs uppercase tracking-[0.5em] text-gray-500">
-                  Proof it works
-                </p>
-                <h3 className="mt-3 text-4xl font-black">
-                  Creators worldwide trust Faizbook.ai
+                <h3 className="mt-3 text-4xl font-black items-center text-center">
+                  Proofs
                 </h3>
-              </div>
-              <div className="flex-1" />
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {socialProofStats.map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
-                  >
-                    <stat.icon className="h-5 w-5 text-pink-200" />
-                    <p className="mt-3 text-3xl font-bold">{stat.metric}</p>
-                    <p className="text-xs uppercase tracking-[0.4em] text-gray-400">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
+                <p className=" mt-3 text-xs uppercase tracking-[0.5em] text-gray-500 text-center">
+                  Creators worldwide trust on  Faizbook.
+                </p>
               </div>
             </div>
             <div className="mt-12 grid gap-8 md:grid-cols-3">
