@@ -1,6 +1,6 @@
 "use client"
 
-import { FileText, Ghost, LayoutDashboard, Menu, PenTool, Settings, User, X } from 'lucide-react'
+import { FileText, Ghost, LayoutDashboard, LayoutListIcon, Menu, PenTool, Settings, User, X } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
@@ -47,7 +47,12 @@ const DashboardLayout = ({ children }) => {
             title: "Profile",
             href: user ? `/${user.username}` : "/dashboard/posts", // to avoid isActive at very beginning 
             icon: User
-        }
+        },
+        {
+            title: "Explore Feed",
+            href: "/feed", // to avoid isActive at very beginning 
+            icon: LayoutListIcon
+        },
     ]
     const gradientText =
         "bg-gradient-to-r from-[#FAD961] via-[#F76B1C] to-[#845EF3] bg-clip-text text-transparent";
