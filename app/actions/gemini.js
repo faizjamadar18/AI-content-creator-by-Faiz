@@ -57,7 +57,7 @@ export async function generateBlogContent(title) {
 // improving the content 
 export async function improveContent(currentContent, improvementType = "enhance") {
     try {
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" })
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" })
         let prompt ;
 
         switch (improvementType) {
