@@ -84,7 +84,7 @@ export default function FeedPage() {
                                 </div>
                             </div>
                         ) : currentPosts.length === 0 ? (
-                            <Card className="bg-[#101112] hover:border-gray-400/50 transition-colors">
+                            <Card className="bg-black hover:border-gray-400/50 transition-colors">
                                 <CardContent className="text-center py-12">
                                     <div className="space-y-4">
                                         <div className="text-6xl">📝</div>

@@ -76,7 +76,7 @@ const page = () => {
               <CardTitle className="text-sm font-medium text-slate-300">
                 {stat.title}
               </CardTitle>
-              <stat.icon className="h-4 w-4 text-blue-400" />
+              <stat.icon className="h-4 w-4" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-white">
@@ -86,7 +86,7 @@ const page = () => {
           </Card>
         ))}
       </div>
-
+      
 
     </div>
   )

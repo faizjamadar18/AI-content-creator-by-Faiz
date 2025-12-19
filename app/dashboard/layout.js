@@ -54,16 +54,17 @@ const DashboardLayout = ({ children }) => {
             icon: LayoutListIcon
         },
     ]
-    const gradientText =
-        "bg-gradient-to-r from-[#FAD961] via-[#F76B1C] to-[#845EF3] bg-clip-text text-transparent";
 
     return (
         <div>
 
             <aside className={cn("fixed top-0 left-0 h-full w-64 bg-[#101112] backdrop-blur-sm z-50 transition-transform border-r-1 duration-300 lg:translate-x-0", isSidebarOpen ? "translate-x-0" : "-translate-x-full")}>
                 <div className='flex items-center justify-between p-5' >
-                    <Link href={"/"} className='flex items-center gap-3 flex-shrink-0 mt-4'>
-                        <span className={`block text-2xl font-black ml-2.5 ${gradientText}`}>
+                    <Link href={"/"} className='flex items-center flex-shrink-0 mt-4 gap-2.5'>
+                        <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                            <span className="text-black font-bold text-lg">F</span>
+                        </div>
+                        <span className={`hidden sm:block text-xl font-black`}>
                             Faizbook.ai
                         </span>
                     </Link>
@@ -91,7 +92,7 @@ const DashboardLayout = ({ children }) => {
                                 href={item.href}
                                 onClick={() => setisSidebarOpen(false)}
                             >
-                                <div className={cn("flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 group", isActive ? "  bg-gradient-to-br from-[#FFC371]/30 to-[#8A6CFF]/30 text-white" : "text-slate-300 hover:text-white hover:bg-black/50")}>
+                                <div className={cn("flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 group", isActive ? " border-1 bg-black text-white/90" : "text-white/40 hover:text-white")}>
                                     <item.icon className='h-5 w-5' />
                                     <span className='font-medium'>{item.title}</span>
 

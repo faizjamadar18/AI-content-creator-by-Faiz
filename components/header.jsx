@@ -17,31 +17,30 @@ const Header = () => {
     const path = usePathname()
     const router = useRouter()
 
-    useEffect(() => {
-        if (!isLoading && isAuthenticated && path === "/") {
-            router.push("/feed")
-        }
-    }, [isLoading, isAuthenticated, router, path])  // jo jo dikh raha hai upr voh sb
+    // useEffect(() => {
+    //     if (!isLoading && isAuthenticated && path === "/feed") {
+    //         router.push("/sign-in")
+    //     }
+    // }, [isLoading, isAuthenticated, router, path])  
 
-    const gradientText =
-        "bg-gradient-to-r from-[#FAD961] via-[#F76B1C] to-[#845EF3] bg-clip-text text-transparent";
 
     if (path !== "/" && path !== "/feed") { // this means show header only on "/" and "/feed"
         return null;
     }
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4 bg-black/50'>
+        <header className='fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4 bg-black/50 '>
             <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-                {/* Logo on left */}
-                <Link href={isAuthenticated ? "/feed" : "/"} className='flex items-center gap-3 flex-shrink-0'>
-                    <span className={`block sm:text-2xl text-xl font-black ${gradientText}`}>
+
+                <Link href="/" className='flex items-center gap-3 flex-shrink-0'>
+                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                        <span className="text-black font-bold text-lg">F</span>
+                    </div>
+                    <span className={`sm:text-xl text-sm font-bold`}>
                         Faizbook.ai
                     </span>
                 </Link>
-
-                {/* Navigation links in center */}
-                {path === "/" && (
+                {/* {path === "/" && (
                     <nav className="hidden md:flex items-center gap-6 flex-1 justify-center mr-10">
                         <Link
                             href="#home"
@@ -78,21 +77,20 @@ const Header = () => {
                             Create
                         </Link>
                     </nav>
-                )}
+                )} */}
 
                 {/* Buttons on right */}
                 <div className="flex items-center justify-center gap-3 flex-shrink-0">
                     {/* when logged in:  */}
                     <Authenticated>
                         {/* Show Dashboard link on feed page */}
-                        {path === "/feed" && (
-                            <Link href="/dashboard">
-                                <Button variant="outline" className="flex rounded-full border border-white/20 bg-white/10 hover:bg-white/20" size="sm">
-                                    <LayoutDashboard className="h-4 w-4" />
-                                    <span className="hidden md:inline ml-2">Dashboard</span>
-                                </Button>
-                            </Link>
-                        )}
+                        <Link href="/dashboard">
+                            <Button variant="outline" className="flex rounded-full border border-white/20 bg-white/10 hover:bg-white/20" size="sm">
+                                <LayoutDashboard className="h-4 w-4" />
+                                <span className="hidden md:inline ml-2">Dashboard</span>
+                            </Button>
+                        </Link>
+
                         <UserButton />
                     </Authenticated>
 

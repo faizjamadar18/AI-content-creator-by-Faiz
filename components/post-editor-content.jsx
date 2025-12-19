@@ -200,9 +200,9 @@ const PostEditorContent = ({ form, onImageUpload }) => {
               <>
                 <div className="grid grid-cols-3 w-full gap-2">
                   {[
-                    { type: "enhance", icon: Sparkles, color: "green" },
-                    { type: "expand", icon: Plus, color: "blue" },
-                    { type: "simplify", icon: Minus, color: "orange" },
+                    { type: "enhance", icon: Sparkles, color: "border-green-500 text-green-600 hover:bg-green-500" },
+                    { type: "expand", icon: Plus, color: "border-blue-500 text-blue-600 hover:bg-blue-500" },
+                    { type: "simplify", icon: Minus, color: "border-orange-500 text-orange-600 hover:bg-orange-500" },
                   ].map(({ type, icon: Icon, color }) => (
                     <Button
                       key={type}
@@ -210,7 +210,7 @@ const PostEditorContent = ({ form, onImageUpload }) => {
                       disabled={isGenerating || isImproving}
                       variant="outline"
                       size="sm"
-                      className={`border-${color}-500 text-${color}-400 hover:bg-${color}-500 hover:text-white disabled:opacity-50`}
+                      className={`${color} hover:text-white disabled:opacity-50`}
                     >
                       <Icon className="h-4 w-4 mr-2" />
                       AI {type}

@@ -2,7 +2,7 @@ import { auth, clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 import { redirect } from 'next/dist/server/api-utils';
 import { NextResponse } from 'next/server';
 
-const protectedRoute = createRouteMatcher(["/dashboard(.*)"]) // we have to protect the /dashboard and /dashboard/anything 
+const protectedRoute = createRouteMatcher(["/dashboard(.*)","/feed(.*)"]) // we have to protect the /dashboard and /dashboard/anything 
 
 
 export default clerkMiddleware(async(auth,req)=>{
