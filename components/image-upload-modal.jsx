@@ -186,7 +186,7 @@ const ImageUploadModal = ({ onOpen, onClose, onImageSelect }) => {
             // Add a small delay to show loading state and allow ImageKit to process
             await new Promise((resolve) => setTimeout(resolve, 3000));
 
-
+            console.log(transformedUrl)
             setTransformedImage(transformedUrl);
 
             toast.success("Transformations applied!");

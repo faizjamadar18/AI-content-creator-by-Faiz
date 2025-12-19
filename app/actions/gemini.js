@@ -11,7 +11,7 @@ export async function generateBlogContent(title) {
         if (!title || title.trim().length === 0) { // trim() removes extra spaces from your sentence
             throw new Error("Title is required to generate content");
         }
-        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" })
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" })
 
         const prompt = `
         Write a comprehensive blog post with the title: "${title}"
