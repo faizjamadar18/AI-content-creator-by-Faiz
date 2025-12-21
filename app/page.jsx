@@ -216,7 +216,7 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          <div className="mx-auto max-w-7xl py-24">
+          <div className="mx-auto max-w-7xl">
             <div className="relative isolate overflow-hidden px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-black sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
                 viewBox="0 0 1024 1024"
@@ -233,20 +233,20 @@ export default function Home() {
               </svg>
               <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
-                  Boost your productivity. Start using our app today.
+                  A platform that turns your ideas into engaging content 
                 </h2>
                 <p className="mt-6 text-lg/8 text-pretty text-gray-300">
-                  Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
+                 Join thousands of creators who are already building their audience and growing their business with our AI-powered platform.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <a
-                    href="#"
-                    className="rounded-md bg-gray-700 px-3.5 py-2.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    href="/dashboard"
+                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black inset-ring inset-ring-white/5 hover:bg-neutral-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     {' '}
                     Get started{' '}
                   </a>
-                  <a href="#" className="text-sm/6 font-semibold text-white hover:text-gray-100">
+                  <a href="/feed" className="text-sm/6 font-semibold text-white hover:text-gray-100">
                     Learn more
                     <span aria-hidden="true">→</span>
                   </a>
@@ -266,10 +266,10 @@ export default function Home() {
         </div>
 
       </div>
-      <footer className="text-sm text-gray-400 border-t-2">
+      <footer className="text-sm text-gray-400">
         <div className="flex flex-wrap items-center my-8">
           <p className="text-sm text-gray-300 w-full text-center">
-            Design & Developed by <strong className="font-black">Faiz</strong>
+            Design & Developed by <strong className="font-black text-white">Faiz</strong>
           </p>
           <p className="text-xs text-gray-500 w-full text-center">
             © 2025. All rights reserved.
