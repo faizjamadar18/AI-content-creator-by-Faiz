@@ -91,7 +91,7 @@ export default function Home() {
       description: "Explore trending content and discover new creators in your feed",
       icon: <IconTrendingUp />,
     },
-        {
+    {
       title: "Built for Everyone",
       description:
         "Built for engineers, developers, dreamers, thinkers and doers.",
@@ -101,7 +101,7 @@ export default function Home() {
       title: "Ease of use",
       description:
         "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />, 
+      icon: <IconEaseInOut />,
     },
   ];
 
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="px-4 py-10 md:py-20">
           <div >
             <h1
-              className="relative z-10 mx-auto max-w-6xl text-center text-3xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
+              className="relative z-10 mx-auto max-w-6xl text-center text-4xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
 
               {"A Social Platform for Effortless Content Creation"
                 .split(" ")
@@ -151,7 +151,7 @@ export default function Home() {
                 duration: 0.3,
                 delay: 0.8,
               }}
-              className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400">
+              className="relative z-10 mx-auto max-w-xl py-4 text-center md:text-lg text-sm font-normal text-neutral-600 dark:text-neutral-400">
               Generate stunning posts, AI-optimized descriptions, and enhance your photos with background removal and professional shadow generation All with the help of AI
             </motion.p>
             <motion.div
@@ -208,14 +208,34 @@ export default function Home() {
         </div>
 
 
+        <h1
+          className="mt-32 relative z-10 mx-auto max-w-6xl text-center text-3xl font-bold text-slate-700 md:text-3xl lg:text-6xl dark:text-slate-300">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+          {"Features we provide"
+            .split(" ")
+            .map((word, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.1,
+                  ease: "easeInOut",
+                }}
+                className="mr-2 inline-block">
+                {word}
+              </motion.span>
+            ))}
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-0 md:py-10 max-w-7xl mx-auto">
           {featurescard.map((featurescard, index) => (
             <Feature key={featurescard.title} {...featurescard} index={index} />
           ))}
         </div>
 
-        <div className="w-full">
+        <div className="w-full mt-32">
           <div className="mx-auto max-w-7xl">
             <div className="relative isolate overflow-hidden px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-black sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
               <svg
@@ -228,20 +248,22 @@ export default function Home() {
                   <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
                     <stop stopColor="#FFFFFF" />
                     <stop offset={1} stopColor="#FFFFFF" />
+                    
                   </radialGradient>
+                  
                 </defs>
               </svg>
               <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
                 <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-6xl">
-                  A platform that turns your ideas into engaging content 
+                  A platform that turns your ideas into engaging content
                 </h2>
                 <p className="mt-6 text-lg/8 text-pretty text-gray-300">
-                 Join thousands of creators who are already building their audience and growing their business with our AI-powered platform.
+                  Join thousands of creators who are already building their audience and growing their business with our AI-powered platform.
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                   <a
                     href="/dashboard"
-                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black inset-ring inset-ring-white/5 hover:bg-neutral-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black inset-ring inset-ring-white/5 hover:bg-neutral-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     {' '}
                     Get started{' '}
@@ -252,6 +274,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+              
               <div className="relative mt-16 h-80 lg:mt-8">
                 <img
                   alt="App screenshot"
@@ -261,12 +284,13 @@ export default function Home() {
                   className="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
                 />
               </div>
+              
             </div>
           </div>
         </div>
 
       </div>
-      <footer className="text-sm text-gray-400">
+      <footer className="text-sm text-gray-400 my-12 md:my-0">
         <div className="flex flex-wrap items-center my-8">
           <p className="text-sm text-gray-300 w-full text-center">
             Design & Developed by <strong className="font-black text-white">Faiz</strong>
