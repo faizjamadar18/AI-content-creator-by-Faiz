@@ -29,10 +29,10 @@ const Header = () => {
     }
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4 bg-black/50 '>
+        <header className='fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4 bg-neutral-950/50 '>
             <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-                <Link href="/" className='flex items-center gap-3 flex-shrink-0'>
+                <Link href="/" className='flex items-center gap-2 flex-shrink-0'>
                     <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <span className="text-black font-bold text-lg">F</span>
                     </div>
