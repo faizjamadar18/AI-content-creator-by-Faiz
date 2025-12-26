@@ -59,7 +59,7 @@ const HeroSection = () => {
               delay={9}
             />
             <img
-              src="https://assets.aceternity.com/pro/aceternity-landing.webp"
+              src="/hero-image.png"
               alt="Dashboard"
               // width={1200}
               // height={1200}

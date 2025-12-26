@@ -14,7 +14,7 @@ export const BorderBeam = ({
   style,
   reverse = false,
   initialOffset = 0,
-  borderWidth = 1
+  borderWidth = 3
 }) => {
   return (
     <div
