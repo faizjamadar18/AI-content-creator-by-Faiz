@@ -13,9 +13,21 @@ import { BorderBeam } from "@/components/ui/border-beam";
 const HeroSection = () => {
   return (
     <section className=
-      "h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20 md:py-24 py-44">
+      "h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20 md:pt-24 pt-34">
 
-      <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
+        <div
+          className={cn(
+            "absolute inset-0",
+            "[background-size:40px_40px]",
+            "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+            "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+            
+          )}
+        />
+        {/* Radial gradient for the container to give a faded look */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-neutral-950 [mask-image:radial-gradient(ellipse_at_center,transparent_5%,black)] dark:bg-neutral-950"></div>
+      <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background ">
+
         <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
 
           <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
@@ -29,9 +41,9 @@ const HeroSection = () => {
               <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
             </span>
           </button>
-          <h1 className="text-foreground text-center py-6 text-6xl font-medium tracking-normal text-balance md:text-8xl !leading-[1.15] w-full font-heading z-50">
+          <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance md:text-8xl !leading-[1.15] w-full font-heading z-50">
             Create Content <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-               Effortlessly
+              Effortlessly
             </span>
           </h1>
           <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance z-50">

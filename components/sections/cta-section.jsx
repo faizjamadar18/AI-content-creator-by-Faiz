@@ -3,6 +3,7 @@ import { LampContainer } from '../ui/lamp'
 import AnimationContainer from '../global/animate-conatiner'
 import { Button } from '../ui/button'
 import { ArrowRightIcon } from 'lucide-react'
+import Link from 'next/link'
 
 const CtaSection = () => {
     return (
@@ -17,12 +18,12 @@ const CtaSection = () => {
                         <p className="text-muted-foreground mt-6 max-w-md mx-auto">
                             Join thousands of creators who are already building their audience and growing their business with our AI-powered platform.
                         </p>
-                        <div className="mt-6">
-                            <Button>
+                        <Link className="mt-6" href={"/dashboard"}>
+                            <Button >
                                 Get started for free
                                 <ArrowRightIcon className="w-4 h-4 ml-2" />
                             </Button>
-                        </div>
+                        </Link>
                     </div>
                 </LampContainer>
             </AnimationContainer>

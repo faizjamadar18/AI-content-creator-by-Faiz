@@ -13,7 +13,9 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
+      <div className="relative">
       <HeroSection/>
+      </div>
       <FeatureSection/>
       <ProcessSection/>
       <CtaSection/>
