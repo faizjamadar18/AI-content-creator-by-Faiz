@@ -11,7 +11,9 @@ import { Button } from './ui/button';
 import { LayoutDashboard } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import {  DM_Sans } from "next/font/google";
 
+const dm_Sans = DM_Sans({ subsets: ["latin"] });
 const Header = () => {
     const { isLoading, isAuthenticated } = useStoreUser()
     const path = usePathname()
@@ -24,19 +26,19 @@ const Header = () => {
     // }, [isLoading, isAuthenticated, router, path])  
 
 
-    if (path !== "/" && path !== "/feed") { // this means show header only on "/" and "/feed"
+    if (path !== "/" && path !== "/feed" && path !== "/sign-in" && path !== "/sign-up") { // this means show header only on "/" and "/feed"
         return null;
     }
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 py-4 bg-neutral-950/50 '>
-            <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        <header className='fixed top-0 left-0 right-0 z-50 w-full px-24 sm:px-6 lg:px-8 py-4 bg-neutral-950/50 '>
+            <div className="max-w-7xl mx-auto flex items-center justify-between px-24">
 
                 <Link href="/" className='flex items-center gap-2 flex-shrink-0'>
-                    <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                    {/* <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <span className="text-black font-bold text-lg">F</span>
-                    </div>
-                    <span className={`sm:text-xl text-sm font-bold`}>
+                    </div> */}
+                    <span className={`sm:text-2xl text-lg font-bold ${dm_Sans.className}`}>
                         Faizbook.ai
                     </span>
                 </Link>
