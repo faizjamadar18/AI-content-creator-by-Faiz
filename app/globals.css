@@ -42,6 +42,24 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 :root {
@@ -131,14 +149,10 @@
 /* gray-900 → specific shade from Tailwind’s gray palette
 /50 → opacity percentage (50%) */
 
-
 html {
   scroll-padding-top: 80px; 
   scroll-behavior: smooth;
 }
-
-
-
 
 @layer base {
   :root {
@@ -215,7 +229,7 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -266,8 +280,6 @@ html, body {
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
 }
-
-
 
 .gradient {
   background: conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg);

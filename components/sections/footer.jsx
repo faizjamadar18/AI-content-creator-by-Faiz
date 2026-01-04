@@ -2,6 +2,7 @@ import React from 'react'
 import AnimationContainer from '../global/animate-conatiner'
 import { User } from 'lucide-react'
 import Link from 'next/link'
+import { TextHoverEffect } from '../ui/text-hover-effect'
 
 const Footer = () => {
     return (
@@ -151,9 +152,9 @@ const Footer = () => {
                 </AnimationContainer>
             </div>
 
-            {/* <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
-                    <TextHoverEffect text="LINKIFY" />
-                </div> */}
+            <div className="h-[20rem] lg:h-[20rem] hidden md:flex items-center justify-center">
+                    <TextHoverEffect text="FAIZBOOK" />
+                </div>
         </footer>
 
     )
