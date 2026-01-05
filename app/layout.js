@@ -21,20 +21,25 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.className}`}>
-
-        <ClerkProvider
-          appearance={{
-            baseTheme: dark,
-          }}>
-          <ConvexClientProvider>
-            {/* Header */}
-            <Header />
-            <main className="mx-auto w-full z-0 relative">
-              {children}
-            </main>
-          </ConvexClientProvider>
-        </ClerkProvider>
-
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClerkProvider
+            appearance={{
+              baseTheme: dark,
+            }}>
+            <ConvexClientProvider>
+              {/* Header */}
+              <Header />
+              <main className="mx-auto w-full z-0 relative">
+                {children}
+              </main>
+            </ConvexClientProvider>
+          </ClerkProvider>
+        </ThemeProvider>
       </body>
     </html>
 
