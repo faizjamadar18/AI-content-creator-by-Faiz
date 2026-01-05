@@ -13,7 +13,7 @@ import { BorderBeam } from "@/components/ui/border-beam";
 const HeroSection = () => {
   return (
     <section className=
-      "h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20 md:pt-34 pt-34">
+      "h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20 md:pt-28 pt-34">
 
         <div
           className={cn(

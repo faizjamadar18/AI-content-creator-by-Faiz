@@ -14,7 +14,7 @@ const Testimonials = () => {
         <div id='testomonials' className="mt-32 h-full mx-auto w-full max-w-screen-xl px-4 md:px-20 flex flex-col items-center justify-center py-12 relative">
             <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-indigo-500 rounded-full blur-[10rem] -z-10"></div>
             <Container>
-                <div className="max-w-md mx-auto text-start md:text-center">
+                <div className="max-w-md mx-auto text-center">
                     <MagicBadge title="Testomonials" />
                     <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
                         What people are saying

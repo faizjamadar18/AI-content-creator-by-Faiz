@@ -31,8 +31,8 @@ const Header = () => {
     }
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 w-full py-4 bg-neutral-950/50 backdrop-blur-xl'>
-            <div className="max-w-7xl mx-auto flex items-center justify-between md:px-12 px-3">
+        <header className='sticky top-0 inset-x-0 h-14 md:px-32 px-1 w-full z-50 py-4 bg-neutral-950/50 backdrop-blur-xl'>
+            <div className="flex items-center justify-between md:px-12 px-3">
                 <div className='flex gap-16'>
                     
 
@@ -40,7 +40,7 @@ const Header = () => {
                     {/* <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <span className="text-black font-bold text-lg">F</span>
                     </div> */}
-                    <span className={`sm:text-xl text-lg font-bold ${dm_Sans.className}`}>
+                    <span className={`text-xl font-black ${dm_Sans.className}`}>
                         Faizbook.ai
                     </span>
                 </Link>
@@ -94,7 +94,7 @@ const Header = () => {
                             </Button>
                         </SignInButton>
                         <SignUpButton>
-                            <Button className="border border-white/20 bg-black hover:bg-white/20 text-white whitespace-nowrap" size="sm">
+                            <Button variant='md:primary' className="border border-white/20 bg-black hover:bg-white/20 text-white whitespace-nowrap" size="sm">
                                 Get started
                             </Button>
                         </SignUpButton>
