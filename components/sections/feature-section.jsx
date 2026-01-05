@@ -5,7 +5,7 @@ import MagicBadge from '../ui/magic-badge'
 
 const FeatureSection = () => {
     return (
-        <div className="pt-10 h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20">
+        <div id='features' className="pt-10 h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20">
             <AnimationContainer delay={0.1}>
                 <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
                     <MagicBadge title="Features" />

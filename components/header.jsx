@@ -31,56 +31,46 @@ const Header = () => {
     }
 
     return (
-        <header className='fixed top-0 left-0 right-0 z-50 w-full px-24 sm:px-6 lg:px-8 py-4 bg-neutral-950/50 '>
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-24">
+        <header className='fixed top-0 left-0 right-0 z-50 w-full py-4 bg-neutral-950/50 backdrop-blur-xl'>
+            <div className="max-w-7xl mx-auto flex items-center justify-between md:px-12 px-3">
+                <div className='flex gap-16'>
+                    
 
                 <Link href="/" className='flex items-center gap-2 flex-shrink-0'>
                     {/* <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                         <span className="text-black font-bold text-lg">F</span>
                     </div> */}
-                    <span className={`sm:text-2xl text-lg font-bold ${dm_Sans.className}`}>
+                    <span className={`sm:text-xl text-lg font-bold ${dm_Sans.className}`}>
                         Faizbook.ai
                     </span>
                 </Link>
-                {/* {path === "/" && (
+                {path === "/" && (
                     <nav className="hidden md:flex items-center gap-6 flex-1 justify-center mr-10">
                         <Link
-                            href="#home"
-                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
-                        >Home</Link>
+                            href="#features"
+                            className="text-neutral-500 font-bold text-sm hover:text-neutral-400"
+                        >Features</Link>
                         <Link
-                            href="#vision"
-                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
+                            href="#process"
+                            className="text-neutral-500 font-bold text-sm hover:text-neutral-400"
                         >
-                            Vision
+                            Process
                         </Link>
                         <Link
-                            href="#suite"
-                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
+                            href="#testomonials"
+                            className="text-neutral-500 font-bold text-sm hover:text-neutral-400"
                         >
-                            Toolkit
-                        </Link>
-                        <Link
-                            href="#workflow"
-                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
-                        >
-                            Flow
-                        </Link>
-                        <Link
-                            href="#proof"
-                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
-                        >
-                            Proofs
+                            Testomonials
                         </Link>
                         <Link
                             href="#create"
-                            className="text-white text-sm font-black transition-colors duration-200 hover:text-purple-300"
+                            className="text-neutral-500 font-bold text-sm hover:text-neutral-400"
                         >
                             Create
                         </Link>
                     </nav>
-                )} */}
-
+                )}
+                </div>
                 {/* Buttons on right */}
                 <div className="flex items-center justify-center gap-3 flex-shrink-0">
                     {/* when logged in:  */}
@@ -98,16 +88,16 @@ const Header = () => {
 
                     {/* when logged out:  */}
                     <Unauthenticated>
-                        {/* <SignInButton>
-                            <Button variant={"none"} className=" text-white text-sm font-medium transition-all duration-300 hover:text-purple-300" size="sm">
+                        <SignInButton>
+                            <Button variant={"none"} className=" text-white text-sm font-medium transition-all duration-300 hover:text-neutral-300 hidden md:block" size="sm">
                                 Sign In
                             </Button>
-                        </SignInButton> */}
-                        <SignInButton>
+                        </SignInButton>
+                        <SignUpButton>
                             <Button className="border border-white/20 bg-black hover:bg-white/20 text-white whitespace-nowrap" size="sm">
                                 Get started
                             </Button>
-                        </SignInButton>
+                        </SignUpButton>
                     </Unauthenticated>
                 </div>
 

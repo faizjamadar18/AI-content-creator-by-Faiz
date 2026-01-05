@@ -17,9 +17,9 @@ const Footer = () => {
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
                         <div className="flex items-start">
                             <Link href="/" className='flex items-center gap-2 flex-shrink-0'>
-                                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                {/* <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                                     <span className="text-black font-bold text-lg">F</span>
-                                </div>
+                                </div> */}
                                 <span className={`sm:text-xl text-sm font-bold`}>
                                     Faizbook.ai
                                 </span>

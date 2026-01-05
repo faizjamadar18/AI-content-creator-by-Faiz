@@ -5,7 +5,7 @@ import { MagicCard } from '../ui/magic-card'
 
 const ProcessSection = () => {
     return (
-        <div>
+        <div id='process'>
             <div className="py-10 mt-32 h-full mx-auto w-full max-w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20">
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">

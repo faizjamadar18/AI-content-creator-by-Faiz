@@ -60,7 +60,7 @@ const DashboardLayout = ({ children }) => {
 
             <aside className={cn("fixed top-0 left-0 h-full w-64 bg-[#101112] backdrop-blur-sm z-50 transition-transform border-r-1 duration-300 lg:translate-x-0", isSidebarOpen ? "translate-x-0" : "-translate-x-full")}>
                 <div className='flex items-center justify-between p-5' >
-                    <Link href={"/"} className='flex items-center flex-shrink-0 mt-4 gap-2.5'>
+                    <Link href={"/"} className='flex items-center flex-shrink-0 mt-4 gap-2'>
                         <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
                             <span className="text-black font-bold text-lg">F</span>
                         </div>

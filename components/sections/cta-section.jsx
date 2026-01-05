@@ -8,7 +8,7 @@ import Link from 'next/link'
 const CtaSection = () => {
     return (
 
-        <div className="mx-auto w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
+        <div id='create' className="mx-auto w-full md:max-w-screen-xl px-4 md:px-12 lg:px-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
             <AnimationContainer delay={0.1}>
                 <LampContainer className="mt-20">
                     <div className="flex flex-col items-center justify-center relative w-full text-center">
