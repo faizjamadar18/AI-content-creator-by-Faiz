@@ -30,12 +30,12 @@ export default function SignInPage() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 gap-4">
-      {/* <Button
+      <Button
         onClick={handleDemoLogin}
         className="w-full max-w-sm bg-white text-black rounded-md"
       >
         {loading ? "Logging in..." : "Login with Demo Account"}
-      </Button> */}
+      </Button>
 
       <div className="w-full max-w-sm">
         <SignIn />
